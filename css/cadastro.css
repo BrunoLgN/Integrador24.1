@@ -1,0 +1,138 @@
+body{
+    background-color: #f5f5db;
+    font-family: 'Rubik';
+}
+
+img{
+    height: 500px;
+}
+
+input{
+    font-size: 15px;
+    height: 20px;
+    border: solid black 2px;
+    
+}
+
+p{
+    margin: 0;
+    background-image: linear-gradient(to right, #0E99FF, #0E99FF);
+    background-position: 0 130%;
+    background-size: 30% 7px;
+    background-repeat: no-repeat;
+}
+
+h3{
+    font-weight: 500;
+}
+
+h2{
+    margin-bottom: 40px;
+}
+
+button{
+    background-color: #0E99FF;
+    color: white;
+    width: 615px;
+    height: 30px;
+    cursor: pointer;
+    
+}
+
+.registroH2{
+    margin-top: 90px;
+}
+
+.item{
+    text-align: start;
+    margin-left: 40px;
+}
+
+.container{
+    display: flex;
+    margin: 4%;
+    gap: 200px;
+}
+
+.containerForm{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.containerFormInside{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.quadradoCadastro{
+    background: white;
+    width: 700px;
+    height: 650px;
+    border-radius: 2%;
+    text-align: center;
+    border-style: outset;
+}
+
+.retanguloEsquerdo{
+    height: 654px;
+    width: 300px;
+    background-color: #CAE9FF;
+    border: #0E99FF solid 2px;
+    border-style: outset;
+    border-radius: 2%;
+    
+}
+
+.icons2{
+    height: 50px;
+    margin: 0;
+}
+
+.logo{
+    height: 50px;
+    margin-right: 140px;
+    border-radius: 10px;
+}
+.botaoEsquerdo{
+    background-color: #0E99FF;
+    color: white;
+    font-size: 15px;
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+}
+.margin{
+    margin-left: 27px;
+}
+
+.margin2{
+    margin-left: 33px;
+}
+
+.margin3{
+    margin-left: 15px;
+}
+
+.margin4{
+    margin-left: 19px;
+}
+
+.margin5{
+    margin-left: 43px;
+}
+
+.margin6{
+    margin-left: 34px;
+}
+
+.inputDano{
+    height: 80px;
+    width: 423px;
+}
+
+.divDano{
+    margin-top: 80px;
+}

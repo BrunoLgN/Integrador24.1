@@ -1,0 +1,56 @@
+body{
+    background-color: #f5f5db;
+    font-family: 'Rubik';
+}
+
+iframe{
+    width: 450px;
+    height: 500px;
+    margin-left: 200px;
+}
+
+.retanguloEsquerdo{
+    height: 654px;
+    width: 300px;
+    background-color: #CAE9FF;
+    border: #0E99FF solid 2px;
+    border-style: outset;
+    border-radius: 2%;
+}
+
+.quadradoMenu{
+    background: white;
+    width: 700px;
+    height: 650px;
+    border-radius: 2%;
+    text-align: center;
+    border-style: outset;
+}
+
+.logo{
+    height: 50px;
+    margin-right: 140px;
+    border-radius: 10px;
+}
+
+.icons2{
+    height: 50px;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    gap: 180px;
+    
+}
+
+.alinharEsquerda{
+    text-align: start;
+    margin: 10px;
+}
+
+.botaoVerde{
+    background-color: lightgreen;
+    width: 200px;
+    height: 30px;
+}

@@ -25,6 +25,7 @@
 
 body{
     background-color: #f5f5db;
+    font-family: 'Rubik';
 }
 
 input{
@@ -56,6 +57,7 @@ input{
     height: 40px;
     margin-top: 20px;
     background-color: #0e99ff;
+    cursor: pointer;
 }
 
 .checkbox{
@@ -91,4 +93,8 @@ a{
     font-family: 'Outfit';
 }
 
-
+.mensagemErro{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: red;
+}

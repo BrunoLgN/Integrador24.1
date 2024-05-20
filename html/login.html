@@ -6,7 +6,9 @@
     <title>Log-in</title>
 
     <link rel="stylesheet" href="/css/login.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -22,16 +24,22 @@
             </div>
             <div>
                 <form action="">
-                    <input type="text" class="input02">
+                    <input type="password" class="input02">
                 </form> 
             </div> 
-            <div>
-                <button class="login">Log-in</button>
+            <div class="entrada">
+                <a  class="logar">
+                    <button class="login" onclick="
+                    logar()
+                    
+                    ">Log-in</button>
+                </a>
+                <p class="mensagemErro"></p>
             </div>
             <div class="checkbox container2">
                 <div>
                     <p>
-                        <input type="checkbox" name="" id="">
+                        <input type="checkbox" name="" id="" class="botaoLembrar">
                         Lembrar meu Login e Senha
                     </p>
                 </div>
@@ -46,5 +54,6 @@
         </div>
     </div>
     
+    <script src="/scripts/login.js"></script>
 </body>
 </html>

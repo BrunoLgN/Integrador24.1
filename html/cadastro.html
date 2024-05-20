@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de cliente</title>
+    <link rel="stylesheet" href="/css/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="retanguloEsquerdo containerBotoes">
+            <div>
+                <img src="/elementos/logo2.png" alt="" class="logo">
+                <img class="icons2" src="/elementos/conta.png" alt="">
+                <img class="icons2" src="/elementos/setaBaixo.png" alt="">
+            </div>
+            <div>
+                <button class="botaoEsquerdo">Inspeção</button>
+            </div>
+            <div>
+                <button class="botaoEsquerdo">Cliente</button>
+            </div>
+            <div>
+                <button class="botaoEsquerdo">Estoque</button>
+            </div>
+        </div>
+        <div class="quadradoCadastro">
+            <h3 class="tomarAcao">Selecione sua ação</h3>
+       
+            <button class="consulta" onclick="consulta()">Consultar Cliente</button>
+            
+            <button class="cadastro" onclick="cadastroCliente()">Cadastrar novo cliente</button>
+            
+        </div>
+        
+    </div>
+    <script src="/scripts/cadastro.js"></script>
+</body>
+</html>

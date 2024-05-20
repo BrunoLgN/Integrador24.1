@@ -1,0 +1,13 @@
+body{
+    font-family: 'Rubik';
+}
+
+h4{
+    margin-left: 150px;
+}
+
+.linha{
+    width: 400px;
+    height: 3px;
+    background-color: black;
+}
