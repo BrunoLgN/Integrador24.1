@@ -164,25 +164,77 @@ function cadastroCliente(){
     input9.classList.add('inputDano')
 
     const divForm6 = document.createElement('div')
-    createDivForm(divForm6)
+    divForm6.classList.add('item', 'containerForm')
+    container.appendChild(divForm6)
 
     const enviar = document.createElement('button')
     divForm6.appendChild(enviar)
     enviar.innerHTML = 'Enviar'
-}
 
-function createDivForm(nome){
+    enviar.addEventListener('click', function() {
+        setCadastro(input1, input2, input3, input4, input5, input6, input7, input8, input9);
+    });
+
     
-    nome.classList.add('item', 'containerForm')
-    container.appendChild(nome)
 }
 
-function consulta(){
 
-    document.querySelector('.tomarAcao' ).parentNode.removeChild(document.querySelector('.tomarAcao' ));
-    document.querySelector('.consulta' ).parentNode.removeChild(document.querySelector('.consulta' ));
-    document.querySelector('.cadastro' ).parentNode.removeChild(document.querySelector('.cadastro' ));
+
+
+let cadastros = [];
+
+function setCadastro(input1, input2, input3, input4, input5, input6, input7, input8, input9) {
+    if (input1.value.trim() !== "" && input2.value.trim() !== "" && input3.value.trim() !== "" && input4.value.trim() !== "" && input5.value.trim() !== "" && input6.value.trim() !== "" && input7.value.trim() !== "" && input8.value.trim() !== "" && input9.value.trim() !== "") {
+        let cadastro = {
+            nome: input1.value,
+            endereco: input2.value,
+            cpf: input3.value,
+            telefone: input4.value,
+            marca: input5.value,
+            cor: input6.value,
+            ano: input7.value,
+            placa: input8.value,
+            dano: input9.value
+        };
+        cadastros.push(cadastro);
+        localStorage.setItem('cadastros', JSON.stringify(cadastros));
+    }
+}
+
+
+function consulta() {
+    document.querySelector('.tomarAcao').parentNode.removeChild(document.querySelector('.tomarAcao'));
+    document.querySelector('.consulta').parentNode.removeChild(document.querySelector('.consulta'));
+    document.querySelector('.cadastro').parentNode.removeChild(document.querySelector('.cadastro'));
+
+    const quadrado = document.querySelector('.quadradoCadastro');
+
+    const inputNovo = document.createElement('input');
+    quadrado.appendChild(inputNovo);
+
+    inputNovo.addEventListener('input', function () {
+        const valorInput = inputNovo.value.trim().toLowerCase();
+       
+        cadastros.forEach(function (cadastro) {
+            const nome = cadastro.nome.toLowerCase();
+            if (nome === valorInput) {
+                
+                const divForm = document.createElement('div');
+                divForm.classList.add('item', 'containerForm');
+                quadrado.appendChild(divForm);
+
+                for (const propriedade in cadastro) {
+                    const p = document.createElement('p');
+                    p.textContent = `${propriedade}: ${cadastro[propriedade]}`;
+                    divForm.appendChild(p);
+                }
+            }
+        });
+    });
+}
+
+function mostrarConsulta(cadastro){
     
-
-
 }
+
+cadastros = JSON.parse(localStorage.getItem('cadastros')) || [];
