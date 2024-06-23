@@ -1,0 +1,81 @@
+body{
+    background-color: #f5f5db;
+    font-family: 'Rubik';
+}
+
+img{
+    height: 500px;
+}
+
+input{
+    font-size: 15px;
+    height: 20px;
+    border: solid black 2px;
+}
+
+h3{
+    font-weight: 500;
+}
+
+button{
+    background-color: #0E99FF;
+    color: white;
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+.flex-retangulos{
+    display: flex; 
+    gap: 200px;
+}
+
+.item-formulario{
+    margin: 8px;    
+    text-align: center;
+}
+
+.quadrado-cadastro{
+    background: white;
+    width: 700px;
+    height: 650px;
+    border-radius: 2%;
+    text-align: center;
+    border-style: outset;
+}
+
+.retangulo-esquerdo{
+    height: 654px;
+    width: 300px;
+    background-color: #CAE9FF;
+    border: #0E99FF solid 2px;
+    border-style: outset;
+    border-radius: 2%;
+}
+
+.botao-esquerdo{
+    background-color: #0E99FF;
+    color: white;
+    font-size: 15px;
+    width: 300px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.icones{
+    height: 50px;
+    margin: 0;
+}
+
+.logo{
+    height: 50px;
+    margin-right: 140px;
+    border-radius: 10px;
+}
+
+
+
+
+

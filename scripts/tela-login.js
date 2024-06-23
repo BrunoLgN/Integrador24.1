@@ -12,11 +12,11 @@ function logar(){
 
     if(usuarioRecebido === infoLogin.usuario && senhaRecebida === infoLogin.senha){
         salvarLogin()
-        let botaoLogin = document.querySelector('.logar')
+        let botaoLogin = document.querySelector('.botao-login')
         botaoLogin.href = '/html/menu.html'
        
     } else{
-        const mensagemErro = document.querySelector('.mensagemErro')
+        const mensagemErro = document.querySelector('.mensagem-erro')
         mensagemErro.innerHTML = 'Erro ao efetuar Login, tente novamente !'
     }
 

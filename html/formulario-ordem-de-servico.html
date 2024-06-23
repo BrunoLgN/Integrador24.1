@@ -1,17 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estoque</title>
-    <link rel="stylesheet" href="/Integrador24.1/css/estoque.css">
+    <title>Ordem de Serviço</title>
+    <link rel="stylesheet" href="/Integrador24.1/css/ordem-servico.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="flex-retangulos">
-        <div class="retangulo-esquerdo container-botoes">
+        <div class="retangulo-esquerdo">
             <div>
                 <img src="/Integrador24.1/elementos/logo2.png" alt="" class="logo">
                 <img class="icone" src="/Integrador24.1/elementos/conta.png" alt="">
@@ -28,19 +29,18 @@
             </div>
         </div>
         <div class="quadrado-branco">
-            <div class="alinhar-esquerda">
-                <a href="/Integrador24.1/html/cadastro-peca.html    ">
-                <button class="botao-cadastro">Cadastrar Peça</button>
-            </a>
-            </div>
-            <div class='alinhar-esquerda'>
-                <input type="text" placeholder="Procure sua Peça" class="input-busca" onkeyup="mostrarBusca()">
-            </div>
             
-            <div class="linha">
-
+            <div class="alinhar-esquerda">
+                
+                    
+                    <input type="text" id="nome" name="nome" placeholder="Insira o nome do cliente">
+                    
+                    <button id="enviar">Enviar</button>
+                
             </div>
         </div>
-        <script src="/Integrador24.1/scripts/estoque.js"></script>
+    </div>
+
+    <script src="/Integrador24.1/scripts/formulario-ordem-de-servico.js"></script>
 </body>
 </html>

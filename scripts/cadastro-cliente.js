@@ -1,11 +1,11 @@
 function cadastroCliente(){
     
-    document.querySelector('.tomarAcao' ).parentNode.removeChild(document.querySelector('.tomarAcao' ));
+    document.querySelector('.tomar-acao' ).parentNode.removeChild(document.querySelector('.tomar-acao' ));
     document.querySelector('.consulta' ).parentNode.removeChild(document.querySelector('.consulta' ));
     document.querySelector('.cadastro' ).parentNode.removeChild(document.querySelector('.cadastro' ));
     
 
-    const container = document.querySelector('.quadradoCadastro')
+    const container = document.querySelector('.quadrado-cadastro')
 
    // Manipulação to titulo: Cadastro Cliente
     const divTitulo = document.createElement('div')
@@ -15,13 +15,14 @@ function cadastroCliente(){
     titulo.innerHTML = "Cadastro de cliente"
 
     const divForm1 = document.createElement('div')
-    divForm1.classList.add('item', 'containerForm')
+    divForm1.classList.add('alinhar-cadastro', 'flex-formulario')
     container.appendChild(divForm1)
 
     const divNome = document.createElement('div')
     divForm1.appendChild(divNome)
     
     const nome = document.createElement('p')
+    nome.classList.add('texto-cadastro')
     divNome.appendChild(nome)
     nome.innerHTML = 'Nome:'
     
@@ -36,6 +37,7 @@ function cadastroCliente(){
     divForm1.appendChild(divcpf)
     
     const cpf = document.createElement('p')
+    cpf.classList.add('texto-cadastro')
     divcpf.appendChild(cpf)
     cpf.innerHTML = 'CPF:'
 
@@ -48,13 +50,14 @@ function cadastroCliente(){
 
 
     const divForm2 = document.createElement('div')
-    divForm2.classList.add('item', 'containerForm')
+    divForm2.classList.add('alinhar-cadastro', 'flex-formulario')
     container.appendChild(divForm2)
 
     const divEndereco = document.createElement('div')
     divForm2.appendChild(divEndereco)
     
     const endereco = document.createElement('p')
+    endereco.classList.add('texto-cadastro')
     divEndereco.appendChild(endereco)
     endereco.innerHTML = 'Endereço:'
 
@@ -68,6 +71,7 @@ function cadastroCliente(){
     divForm2.appendChild(divTelefone)
 
     const telefone = document.createElement('p')
+    telefone.classList.add('texto-cadastro')
     divTelefone.appendChild(telefone)
     telefone.innerHTML = 'Telefone: '
 
@@ -84,13 +88,14 @@ function cadastroCliente(){
     titulo2.innerHTML = "Registro de Veiculo"
 
     const divForm3 = document.createElement('div')
-    divForm3.classList.add('item', 'containerForm')
+    divForm3.classList.add('alinhar-cadastro', 'flex-formulario')
     container.appendChild(divForm3)
 
     const divMarca = document.createElement('div')
     divForm3.appendChild(divMarca)
     
     const marca = document.createElement('p')
+    marca.classList.add('texto-cadastro')
     divMarca.appendChild(marca)
     marca.innerHTML = 'Marca:'
     
@@ -106,6 +111,7 @@ function cadastroCliente(){
     divForm3.appendChild(divPlaca)
     
     const placa = document.createElement('p')
+    placa.classList.add('texto-cadastro')
     divPlaca.appendChild(placa)
     placa.innerHTML = 'Placa:'
 
@@ -117,13 +123,14 @@ function cadastroCliente(){
     input6.classList.add('margin4')
 
     const divForm4 = document.createElement('div')
-    divForm4.classList.add('item', 'containerForm')
+    divForm4.classList.add('alinhar-cadastro', 'flex-formulario')
     container.appendChild(divForm4)
 
     const divAno = document.createElement('div')
     divForm4.appendChild(divAno)
     
     const ano= document.createElement('p')
+    ano.classList.add('texto-cadastro')
     divAno.appendChild(ano)
     ano.innerHTML = 'Ano:'
 
@@ -138,6 +145,7 @@ function cadastroCliente(){
     divForm4.appendChild(divCor)
     
     const cor= document.createElement('p')
+    cor.classList.add('texto-cadastro')
     divCor.appendChild(cor)
     cor.innerHTML = 'Cor:'
 
@@ -149,7 +157,7 @@ function cadastroCliente(){
     input8.classList.add('margin6')
 
     const divForm5 = document.createElement('div')
-    divForm5.classList.add('item', 'containerForm', 'divDano')
+    divForm5.classList.add('alinhar-cadastro', 'flex-formulario', 'div-dano')
     container.appendChild(divForm5)
 
     const dano = document.createElement('h3')
@@ -161,10 +169,10 @@ function cadastroCliente(){
 
     const input9 = document.createElement('input')
     divInput9.appendChild(input9)
-    input9.classList.add('inputDano')
+    input9.classList.add('input-dano')
 
     const divForm6 = document.createElement('div')
-    divForm6.classList.add('item', 'containerForm')
+    divForm6.classList.add('alinhar-cadastro', 'flex-formulario')
     container.appendChild(divForm6)
 
     const enviar = document.createElement('button')
@@ -184,57 +192,80 @@ function cadastroCliente(){
 let cadastros = [];
 
 function setCadastro(input1, input2, input3, input4, input5, input6, input7, input8, input9) {
+    
     if (input1.value.trim() !== "" && input2.value.trim() !== "" && input3.value.trim() !== "" && input4.value.trim() !== "" && input5.value.trim() !== "" && input6.value.trim() !== "" && input7.value.trim() !== "" && input8.value.trim() !== "" && input9.value.trim() !== "") {
+        
+        const anoAtual = new Date().getFullYear();
+        const anoVeiculo = parseInt(input7.value);
+        if (anoVeiculo > anoAtual || anoVeiculo <= anoAtual - 20) {
+            alert("Por favor, insira um ano de fabricação válido.");
+            return; 
+        }
+
         let cadastro = {
             nome: input1.value,
-            endereco: input2.value,
-            cpf: input3.value,
+            cpf: input2.value,
+            endereco: input3.value,
             telefone: input4.value,
             marca: input5.value,
-            cor: input6.value,
+            placa: input6.value,
             ano: input7.value,
-            placa: input8.value,
+            cor: input8.value,
             dano: input9.value
         };
         cadastros.push(cadastro);
         localStorage.setItem('cadastros', JSON.stringify(cadastros));
+    } else {
+        alert("Por favor, preencha todos os campos.");
     }
 }
 
 
 function consulta() {
-    document.querySelector('.tomarAcao').parentNode.removeChild(document.querySelector('.tomarAcao'));
-    document.querySelector('.consulta').parentNode.removeChild(document.querySelector('.consulta'));
-    document.querySelector('.cadastro').parentNode.removeChild(document.querySelector('.cadastro'));
+    
+    const elementosRemover = document.querySelectorAll('.tomar-acao, .consulta, .cadastro');
+    elementosRemover.forEach(function(elemento) {
+        elemento.parentNode.removeChild(elemento);
+    });
 
-    const quadrado = document.querySelector('.quadradoCadastro');
+    const quadrado = document.querySelector('.quadrado-cadastro');
+
+    
+    let conteudoCliente = document.querySelector('.conteudo-cliente');
+    if (!conteudoCliente) {
+        conteudoCliente = document.createElement('div');
+        conteudoCliente.classList.add('conteudo-cliente');
+        quadrado.appendChild(conteudoCliente);
+    }
 
     const inputNovo = document.createElement('input');
     quadrado.appendChild(inputNovo);
 
     inputNovo.addEventListener('input', function () {
         const valorInput = inputNovo.value.trim().toLowerCase();
-       
+
+        
+        conteudoCliente.innerHTML = '';
+        
         cadastros.forEach(function (cadastro) {
             const nome = cadastro.nome.toLowerCase();
             if (nome === valorInput) {
-                
                 const divForm = document.createElement('div');
-                divForm.classList.add('item', 'containerForm');
-                quadrado.appendChild(divForm);
+                divForm.classList.add('item', 'flex-formulario');
+                conteudoCliente.appendChild(divForm);
 
                 for (const propriedade in cadastro) {
                     const p = document.createElement('p');
+                    p.classList.add("paragrafo-consulta")
                     p.textContent = `${propriedade}: ${cadastro[propriedade]}`;
                     divForm.appendChild(p);
+                    divForm.classList.add('container-consulta')
                 }
             }
         });
     });
 }
 
-function mostrarConsulta(cadastro){
-    
-}
 
 cadastros = JSON.parse(localStorage.getItem('cadastros')) || [];
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de peça</title>
+    <link rel="stylesheet" href="/Integrador24.1/css/cadastro-peca.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="flex-retangulos">
+        <div class="retangulo-esquerdo containerBotoes">
+            <div>
+                <img src="/Integrador24.1/elementos/logo2.png" alt="" class="logo">
+                <img class="icones" src="/Integrador24.1/elementos/conta.png" alt="">
+                <img class="icones" src="/Integrador24.1/elementos/setaBaixo.png" alt="">
+            </div>
+            <div>
+                <button class="botao-esquerdo">Inspeção</button>
+            </div>
+            <div>
+                <a href="/Integrador24.1/html/cadastro.html">
+                    <button class="botao-esquerdo">Cliente</button>
+                </a>
+            </div>
+            <div>
+                <button class="botao-esquerdo">Estoque</button>
+            </div>
+        </div>
+        
+        <div class="quadrado-cadastro">
+            <h3 class="tomarAcao">Cadastro de Peça</h3>
+            <form id="formCadastro">
+                <div class="item-formulario">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="item-formulario">
+                    <label for="preço">Preço:</label>
+                    <input type="number" id="preço" name="preço" required>
+                </div>
+                <div class="item-formulario">
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" required>
+                </div>
+                <div class="item-formulario">
+                    <label for="codigo">Código:</label>
+                    <input type="text" id="codigo" name="codigo" required>
+                </div>
+                <button type="submit" class="botao">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/Integrador24.1/scripts/estoque.js"></script>
+</body>
+</html>
+

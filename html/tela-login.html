@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log-in</title>
 
-    <link rel="stylesheet" href="/Integrador24.1/css/login.css">
+    <link rel="stylesheet" href="/Integrador24.1/css/tela-login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     
 </head>
 <body>
-    <div class="container">
-        <div class="quadradoLogin">
+    <div class="flex-principal">
+        <div class="quadrado-branco">
             <div>
-                <img src="/elementos/logopj.png" alt="Logo do Sistema" class="logo">
+                <img src="/Integrador24.1/elementos/logopj.png" alt="Logo do Sistema" class="logo">
             </div>
             <div>
                 <form action="">
@@ -29,14 +29,14 @@
             </div> 
             <div class="entrada">
                 <a  class="logar">
-                    <button class="login" onclick="
+                    <button class="botao-login" onclick="
                     logar()
                     
                     ">Log-in</button>
                 </a>
-                <p class="mensagemErro"></p>
+                <p class="mensagem-erro"></p>
             </div>
-            <div class="checkbox container2">
+            <div class="checkbox-lembrar-login-e-senha flex-inferior">
                 <div>
                     <p>
                         <input type="checkbox" name="" id="" class="botaoLembrar">
@@ -47,13 +47,13 @@
                     <a href="">Esqueci minha senha</a>
                 </div>
             </div>
-            <div class="termos links">
+            <div class="texto-termos-privacidade links">
                 <a href="" class="links">Politica de privacidade</a>
                 <a href="" class="links">Termos de serviço</a>
             </div>
         </div>
     </div>
     
-    <script src="/Integrador24.1/scripts/login.js"></script>
+    <script src="/Integrador24.1/scripts/tela-login.js"></script>
 </body>
 </html>

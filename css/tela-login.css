@@ -1,11 +1,30 @@
-.container{
+body{
+    background-color: #f5f5db;
+    font-family: 'Rubik';
+}
+
+input{
+    margin: 2%;
+}
+
+p{
+    margin: 0%;
+}
+
+a{
+    text-decoration: none;
+    color: #0e99ff;
+    font-family: 'Outfit';
+}
+
+.flex-principal{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 5%;
 }
 
-.quadradoLogin{
+.quadrado-branco{
     background: white;
     width: 500px;
     height: 600px;
@@ -20,16 +39,6 @@
    margin-top: 5%; 
    margin-bottom: 3%;
    border-radius: 5%;
-}
-
-
-body{
-    background-color: #f5f5db;
-    font-family: 'Rubik';
-}
-
-input{
-    margin: 2%;
 }
 
 .input01{
@@ -52,7 +61,7 @@ input{
     background-size: 5%;
 }
 
-.login{
+.botao-login{
     width: 70%;
     height: 40px;
     margin-top: 20px;
@@ -60,23 +69,19 @@ input{
     cursor: pointer;
 }
 
-.checkbox{
+.checkbox-lembrar-login-e-senha{
     text-align:center;
     margin-top: 3%;
     margin-left: 13%;
 }
 
-p{
-    margin: 0%;
-}
-
-.container2{
+.flex-inferior{
     display: flex;
     gap: 20%;
     margin-right: 15%;
 }
 
-.termos{
+.texto-termos-privacidade{
     display: flex;
     justify-content: center;
     margin-top: 10%;
@@ -87,13 +92,8 @@ p{
     color: #c3c3c3;
 }
 
-a{
-    text-decoration: none;
-    color: #0e99ff;
-    font-family: 'Outfit';
-}
 
-.mensagemErro{
+.mensagem-erro{
     margin-top: 20px;
     margin-bottom: 20px;
     color: red;

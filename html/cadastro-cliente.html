@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de cliente</title>
-    <link rel="stylesheet" href="/Integrador24.1/css/cadastro.css">
+    <link rel="stylesheet" href="/Integrador24.1/css/cadastro-cliente.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="retanguloEsquerdo containerBotoes">
+    <div class="flex-retangulos">
+        <div class="retangulo-esquerdo">
             <div>
-                <img src="/elementos/logo2.png" alt="" class="logo">
-                <img class="icons2" src="/elementos/conta.png" alt="">
-                <img class="icons2" src="/elementos/setaBaixo.png" alt="">
+                <img src="/Integrador24.1/elementos/logo2.png" alt="" class="logo">
+                <img class="icons2" src="/Integrador24.1/elementos/conta.png" alt="">
+                <img class="icons2" src="/Integrador24.1/elementos/setaBaixo.png" alt="">
             </div>
             <div>
-                <button class="botaoEsquerdo">Inspeção</button>
+                <button class="botao-esquerdo">Inspeção</button>
             </div>
             <div>
-                <button class="botaoEsquerdo">Cliente</button>
+                <a href="/Integrador24.1/html/cadastro.html">
+                <button class="botao-esquerdo" >Cliente</button>
+            </a>
             </div>
             <div>
-                <button class="botaoEsquerdo">Estoque</button>
+                <button class="botao-esquerdo">Estoque</button>
             </div>
         </div>
-        <div class="quadradoCadastro">
-            <h3 class="tomarAcao">Selecione sua ação</h3>
+        <div class="quadrado-cadastro">
+            <h3 class="tomar-acao">Selecione sua ação</h3>
        
             <button class="consulta" onclick="consulta()">Consultar Cliente</button>
             
@@ -37,6 +39,6 @@
         </div>
         
     </div>
-    <script src="/Integrador24.1/scripts/cadastro.js"></script>
+    <script src="/Integrador24.1/scripts/cadastro-cliente.js"></script>
 </body>
 </html>

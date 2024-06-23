@@ -14,21 +14,14 @@ input{
     
 }
 
-p{
-    margin: 0;
-    background-image: linear-gradient(to right, #0E99FF, #0E99FF);
-    background-position: 0 130%;
-    background-size: 30% 7px;
-    background-repeat: no-repeat;
-}
-
 h3{
     font-weight: 500;
 }
 
 h2{
-    margin-bottom: 40px;
+    margin-bottom: 40px; 
 }
+
 
 button{
     background-color: #0E99FF;
@@ -39,35 +32,32 @@ button{
     
 }
 
-.registroH2{
-    margin-top: 90px;
+.texto-cadastro{
+    margin: 0;
+    background-image: linear-gradient(to right, #0E99FF, #0E99FF);
+    background-position: 0 130%;
+    background-size: 30% 7px;
+    background-repeat: no-repeat;
 }
 
-.item{
+.alinhar-cadastro{
     text-align: start;
     margin-left: 40px;
 }
 
-.container{
-    display: flex;
-    margin: 4%;
+.flex-retangulos{
+    display: flex; 
     gap: 200px;
 }
 
-.containerForm{
+.flex-formulario{
     display: flex;
     flex-direction: row;
     gap: 30px;
     margin-bottom: 40px;
 }
 
-.containerFormInside{
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-}
-
-.quadradoCadastro{
+.quadrado-cadastro{
     background: white;
     width: 700px;
     height: 650px;
@@ -76,7 +66,7 @@ button{
     border-style: outset;
 }
 
-.retanguloEsquerdo{
+.retangulo-esquerdo{
     height: 654px;
     width: 300px;
     background-color: #CAE9FF;
@@ -96,7 +86,7 @@ button{
     margin-right: 140px;
     border-radius: 10px;
 }
-.botaoEsquerdo{
+.botao-esquerdo{
     background-color: #0E99FF;
     color: white;
     font-size: 15px;
@@ -128,11 +118,29 @@ button{
     margin-left: 34px;
 }
 
-.inputDano{
+.input-dano{
     height: 80px;
     width: 423px;
 }
 
-.divDano{
+.div-dano{
     margin-top: 80px;
+}
+
+.container-consulta{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.paragrafo-consulta{
+    margin: 0;
+    margin-right: 50px;
+    margin-top: 15px;
+    border: solid black 2px;
+    padding: 5px;
+}
+
+.conteudo-cliente{
+    border-style: none;
 }
