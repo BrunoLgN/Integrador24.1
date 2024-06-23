@@ -3,22 +3,29 @@ body{
     font-family: 'Rubik';
 }
 
-button{
-    background-color: #0E99FF;
-    color: white;
-    font-size: 15px;
-    width: 155px;
-    height: 40px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.container-botoes{
+.flex-botoes{
     display: flex;
     gap: 10px;
     flex-direction: column;
 }
 
+.botao-esquerdo{
+    background-color: #0E99FF;
+    color: white;
+    font-size: 15px;
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.botao-menu{
+    background-color: #0E99FF;
+    color: white;
+    border-radius: 4px;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}
 
 .logo{
     height: 50px;

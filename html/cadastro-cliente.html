@@ -11,30 +11,34 @@
 </head>
 <body>
     <div class="flex-retangulos">
-        <div class="retangulo-esquerdo">
+        <div class="retangulo-esquerdo flex-botoes">
             <div>
                 <img src="/Integrador24.1/elementos/logo2.png" alt="" class="logo">
                 <img class="icons2" src="/Integrador24.1/elementos/conta.png" alt="">
                 <img class="icons2" src="/Integrador24.1/elementos/setaBaixo.png" alt="">
             </div>
             <div>
+                <a href="/Integrador24.1/html/inspecao.html">
                 <button class="botao-esquerdo">Inspeção</button>
+                </a>
             </div>
             <div>
-                <a href="/Integrador24.1/html/cadastro.html">
-                <button class="botao-esquerdo" >Cliente</button>
+                <a href="/Integrador24.1/html/ordem-servico.html">
+                <button class="botao-esquerdo" >Ordem</button>
             </a>
             </div>
             <div>
+                <a href="/Integrador24.1/html/estoque.html">
                 <button class="botao-esquerdo">Estoque</button>
+                </a>
             </div>
         </div>
         <div class="quadrado-cadastro">
             <h3 class="tomar-acao">Selecione sua ação</h3>
        
-            <button class="consulta" onclick="consulta()">Consultar Cliente</button>
+            <button class="consulta botao-cadastro" onclick="consulta()">Consultar Cliente</button>
             
-            <button class="cadastro" onclick="cadastroCliente()">Cadastrar novo cliente</button>
+            <button class="cadastro botao-cadastro" onclick="cadastroCliente()">Cadastrar novo cliente</button>
             
         </div>
         

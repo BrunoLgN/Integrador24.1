@@ -23,13 +23,14 @@ h2{
 }
 
 
-button{
+.botao-cadastro{
     background-color: #0E99FF;
     color: white;
     width: 615px;
     height: 30px;
     cursor: pointer;
-    
+    margin-top: 2px;
+    border-radius: 4px;
 }
 
 .texto-cadastro{
@@ -73,7 +74,12 @@ button{
     border: #0E99FF solid 2px;
     border-style: outset;
     border-radius: 2%;
-    
+}
+
+.flex-botoes{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
 }
 
 .icons2{

@@ -26,17 +26,14 @@ document.getElementById('enviar').addEventListener('click', function() {
 function criarForm(cad) {
     const quadrado = document.querySelector('.quadrado-branco');
 
-    // Verifica se o formulário já foi criado
     if (quadrado.querySelector('.form-container')) {
-        return; // Se já existe, não faz nada
+        return;
     }
 
-    // Cria um contêiner para o formulário e define uma classe específica
     const div = document.createElement('div');
-    div.classList.add('form-container'); // Adiciona uma classe identificadora
+    div.classList.add('form-container');
     quadrado.appendChild(div);
 
-    // Cria texto NOVA ORDEM DE SERVIÇO
     const novaOrdem = document.createElement('p');
     div.appendChild(novaOrdem);
     novaOrdem.innerText = "Nova Ordem de Serviço";
@@ -58,14 +55,26 @@ function criarForm(cad) {
     input2.placeholder = "Custo da mão de obra";
     input2.classList.add('inputs-servico');
 
-    const total = document.createElement("button")
-    total.innerHTML = "CLIQUE PARA GERAR VALOR FINAL"
-    div.appendChild(total)
-    total.addEventListener("click", function(){
-        const valor = document.createElement("p")
-        div.appendChild(valor)
-        valor.innerHTML = `R$  ${parseInt(input1.value) + parseInt(input2.value)}`
-    })
-    
-    
+    const total = document.createElement("button");
+    total.innerHTML = "CLIQUE PARA GERAR VALOR FINAL";
+    div.appendChild(total);
+    total.addEventListener("click", function () {
+        const valor = document.createElement("p");
+        div.appendChild(valor);
+        valor.innerHTML = `R$  ${parseInt(input1.value) + parseInt(input2.value)}`;
+    });
+
+    const saveButton = document.createElement("button");
+    saveButton.innerHTML = "Salvar Ordem de Serviço";
+    div.appendChild(saveButton);
+    saveButton.addEventListener("click", function () {
+        const ordemServico = {
+            ...cad,
+            custoPecas: input1.value,
+            custoMaoDeObra: input2.value,
+            valorTotal: parseInt(input1.value) + parseInt(input2.value)
+        };
+        localStorage.setItem('ordemServico', JSON.stringify(ordemServico));
+        alert('Ordem de Serviço salva com sucesso!');
+    });
 }

@@ -17,15 +17,6 @@ h3{
     font-weight: 500;
 }
 
-button{
-    background-color: #0E99FF;
-    color: white;
-    width: 300px;
-    height: 30px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
 
 .flex-retangulos{
     display: flex; 
@@ -46,6 +37,15 @@ button{
     border-style: outset;
 }
 
+.botao-cadastro{
+    background-color: #0E99FF;
+    color: white;
+    padding: 5px 10px;
+    width: 200px;   
+    cursor: pointer;
+    border-radius: 4px;
+}
+
 .retangulo-esquerdo{
     height: 654px;
     width: 300px;
@@ -55,12 +55,18 @@ button{
     border-radius: 2%;
 }
 
+.flex-botoes{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
 .botao-esquerdo{
     background-color: #0E99FF;
     color: white;
     font-size: 15px;
     width: 300px;
-    height: 40px;
+    height: 50px;
     cursor: pointer;
 }
 

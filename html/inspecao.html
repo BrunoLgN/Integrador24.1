@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ordem de Serviço</title>
+    <title>Inspeção de Ordem de Serviço</title>
     <link rel="stylesheet" href="/Integrador24.1/css/ordem-servico.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +18,8 @@
                 <img class="icone" src="/Integrador24.1/elementos/setaBaixo.png" alt="">
             </div>
             <div>
-                <a href="/Integrador24.1/html/inspecao.html">
-                <button class="botao-esquerdo">Inspeção</button>
+                <a href="/Integrador24.1/html/ordem-servico.html">
+                <button class="botao-esquerdo">Ordem</button>
             </a>
             </div>
             <div>
@@ -35,18 +35,13 @@
         </div>
         <div class="quadrado-branco">
             <div class="alinhar-esquerda">
-                <a href="/Integrador24.1/html/formulario-ordem-de-servico.html">
-                <button class="botao-verde">Gerar Ordem</button>
-                </a>
+                <input type="text" placeholder="Buscar Ordem de Serviço" class="input-ordem">
+                <button id="buscarOrdem">Buscar Ordem</button>
             </div>
-            <div class="alinhar-esquerda">
-                <input type="text" placeholder="Acompanhar Ordem" class="input-ordem">
-                <button id="pesquisarOrdem">Pesquisar Ordem</button>
-            </div>
-            <div id="resultadoOrdem"></div>
+            <div id="detalhesOrdem" class="form-container"></div>
         </div>
     </div>
 
-    <script src="/Integrador24.1/scripts/ordem-servico.js"></script>
+    <script src="/Integrador24.1/scripts/inspecao.js"></script>
 </body>
 </html>

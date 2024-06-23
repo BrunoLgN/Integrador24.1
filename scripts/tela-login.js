@@ -23,8 +23,6 @@ function logar(){
 
 }
 
-
-
 function verificarSalvarLogin(){
         let usuarioSalvo = localStorage.getItem('usuarioSalvo');
         let senhaSalva = localStorage.getItem('senhaSalva');
